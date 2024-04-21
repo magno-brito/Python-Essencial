@@ -56,33 +56,82 @@ def exer_9():
 #Exer 10: Crie um programa que peça ao usuário para digitar três números (A,B e C). Em seguida o programa deve calcular e mostrar os valores das raízes da seguinte equação, usando a fórmula de Bhaskará Ax² + Bx + C = 0
 
 def exer_10():
-    print("Ok")
+    A = float(input("Digite um número A: \n"))
+    B = float(input("Digite um número B: \n"))
+    C = float(input("Digite um número C: \n"))
+
+    try:
+        delta = math.sqrt(B**2 - 4*A*C)
+        print(delta)
+        raiz_A = (-B + delta)/(2*A)
+        print(A)
+        raiz_B = (-B - delta)/(2*A)
+        print("As raízes são " + str(raiz_A) + " e " + str(raiz_B))
+    except:
+        print("Não existe raízes possíveis")
+    
+    
+
 
 #Exer 11: Crie um programa que peça ao usuário para digitar o raio de um círculo. Em seguida, o programa deve calcular e mostrar a área e o comprimento do círculo.
 
 def exer_11():
-    print("Ok")
+    raio = float(input("Digite o raio de um círculo: \n"))
+    if raio < 0: raio*=(-1)
+    area = round(math.pi*raio**2,2)
+    comprimento = round(math.pi*2*raio,2)
+
+    print("Área: " + str(area))
+    print("Comprimento: " + str(comprimento))
 
 #Exer 12: Crie um programa que peça ao usuário para digitar as dimensões de um retângulo (largura e altura). Em seguida, o programa deve calcular e mostrar a área e o perímetro desse retângulo.
 
 def exer_12():
-    print("Ok")
+    comprimento = float(input("Digite o comprimento de um retângulo: \n"))
+    altura = float(input("Digite a altura de um retângulo: \n"))
+    if comprimento < 0: comprimento*=-1
+    if altura < 0: altura*=-1
+    area = comprimento*altura
+    perimetro = 2*comprimento + 2*altura
+    print("Área do retângulo: " + str(area))
+    print("Perímetro do retângulo: " + str(perimetro))
 
 #Exer 13: Crie um programa que peça ao usuário para digitar a base e a altura de um triângulo. Em seguida, o programa deve calcular e mostrar a área desse triângulo.
 
 def exer_13():
-    print("Ok")
+    base = float(input("Digite a base do triângulo: \n"))
+    altura = float(input("Digite a altura do triângulo: \n"))
+    if base < 0: base *=-1
+    if altura < 0: altura*=-1
+    area = base*altura/2
+
+    print("Área do triângulo é: " + str(area))
 
 #Exer 14: Crie um programa que peça ao usuário para digitar o nome, preço de custo, o preço de venda e a quantidade em estoque de um determinado produto. Em seguida, o programa deve calcular e mostrar o lucro que esse produto pode gerar se todo o estoque for vendido.
 
 def exer_14():
-    print("Ok")
+    nome = input("Digite o nome do produto:\n")
+    preco_custo = float(input("Digite o preço de custo:\n"))
+    preco_venda = float(input("Digite o preço de venda:\n"))
+    quantidade_em_estoque = int(input("Digite a quantidade em estoque do produto:\n"))
+
+    lucro = quantidade_em_estoque*(preco_venda-preco_custo)
+    print(f"O lucro obtido {nome} se todo o estoque for vendido é de R$ {lucro}")
 
 #Exer 15: Crie um programa que peça ao usuário para digitar o valor total de uma venda, o percentual de desconto aplicado e o percentual de imposto cobrado. Ao fim, o programa deve mostrar o preço final da mercadoria, sendo que o imposto é cobrado sobre o valor com desconto.
 
 def exer_15():
-    print("Ok")
+    valor_total = float(input("Digite o valor total da venda:\n"))
+    desconto = float(input("Digite o percentual de desconto (%): \n"))
+    imposto = float(input("Digite o percentual do imposto cobrado(%):\n"))
+
+    preco_sem_imposto = valor_total - valor_total*(desconto/100)
+    preco_final = preco_sem_imposto - preco_sem_imposto*(imposto/100)
+    print(f"O valor final é R$ {preco_final}")
+
 
 #---------------------------------------------------------------
 
-exer_9()
+#Chame aqui cada função para executar os exercícios
+
+exer_1()
