@@ -1,5 +1,48 @@
 import math
 
+# 1.1 Crie um programa que armazene seu nome e dua idade em variáveis separadas e imprima uma saída formatada com elas.
+
+def exer_1():
+    nome = str(input("Digite seu nome:\n"))
+    idade = int(input("Digite sua idade:\n"))
+    print('Seu nome é {} e sua idade é {}'.format(nome,idade))
+
+# 1.2 Crie um programa que armazene dois números em variáveis separadas e imprima a soma, subtração, multiplicação e divisão desses números.
+
+def exer_2():
+    numero_A = float(input("Digite um número:\n"))
+    numero_B = float(input("Digite outro número:\n"))
+
+    print("Soma de A e B:" + str(numero_A + numero_B))
+    print("Subtração de A e B:" + str(numero_A - numero_B))
+    print("Produto de A e B:" + str(numero_A*numero_B))
+    print("Razão de A e B:" + str(numero_A/numero_B))
+
+
+# 1.3 Crie um programa que peça ao usuário para digitar três números, armazenando-os em variáveis distindas. Em seguida, imprima a média aritmética dos três números. 
+    
+def exer_3():
+    numero1 = float(input("Digite o primeiro número:\n"))
+    numero2 = float(input("Digite o segundo número:\n"))
+    numero3 = float(input("Digite o terceiro número:\n"))
+
+    print("A média aritmética dos números fornecidos são: " + str((numero1+numero2+numero3)/3))
+
+
+# 1.4 Crie um programa que peça ao usuário para digitar seu peso e sua altura. Em seguida calcule o índice de massa corporal (IMC) e imprima o resultado. A fórmula do IMC é:
+    # IMC = peso/altura²
+
+def exer_4():
+    print(2^3)
+    peso = float(input("Digite seu peso:\n"))
+    altura = float(input("Digite sua altura:\n"))
+
+    imc = peso/(altura**2)
+
+    print("O resultado de seu IMC é: " + str(imc))
+
+
+
 #Exer 5: Crie um programa que peça ao usuário para digitar três números e imprima a soma
 
 def exer_5():

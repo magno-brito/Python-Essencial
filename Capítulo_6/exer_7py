@@ -1,0 +1,16 @@
+#Exer 7 - Faça um programa que crie um dicionário com nomes e notas de alunos, ambos digitados pelo usuário, usando os nomes dos alunos como chave e as notas como valor. Em seguida, use dict comprehension para criar um dicionário com os alunos e suas notas arredondadas para o número inteiro mais próximo da nota do aluno
+
+def exer_7()-> dict:
+    dicionario = dict()
+    while True:
+        nome = input("Digite o nome do aluno:\n")
+        nota = float(input("Digite a nota ou -1 para sair:\n"))
+        if nota == -1.0:
+            break
+        else:
+            dicionario[nome] = nota
+    novo_dicio = {chave:round(valor) for (chave, valor) in dicionario.items()  }
+    print(novo_dicio)
+
+exer_7()
+

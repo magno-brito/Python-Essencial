@@ -71,7 +71,17 @@ def exer_6():
 #Exer 7 - Crie um programa que peça ao usuário para digitar o nome de usuário e uma senha contendo apenas caracteres alfanuméricos e use uma expressão regular para fazer uma limpeza nos valores digitados, exibindo novamente para o usuário os valores processados. 
 
 def exer_7():
-    print("Não entendi")
+    nome = input("Digite seu nome:\n")
+    senha = input("Digite sua senha:\n")
+
+    nome_nov = re.sub(r'\W','',nome)
+    senha_nov = re.sub(r'\W','',senha)
+
+    print(nome_nov)
+    print(senha_nov)
+
+
+exer_7()
 
 #Exer 8 - Crie um programa que peça ao usuário para digitar uma frase com 5 palavras. Caso a frase digitada tenha uma quantidade diferente de palavras, o usuário deve digitar novamente. Ao fim, mostre uma palavra por linha. Use expressões regulares para extrair as palavras.
 
