@@ -27,5 +27,5 @@ from exer_5 import Animal
 # print(carro.mostrar_velocidade())
 
 #Exer 5
-animal = Animal("Galinha", 5)
-print(animal.emitir_som())
+# animal = Animal("Galinha", 5)
+# print(animal.emitir_som())
